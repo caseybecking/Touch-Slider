@@ -2,6 +2,8 @@
 Mobile = {};
 Desktop = {};
 
+
+
   var ua = navigator.userAgent.toLowerCase();
   Desktop.isWebkit = ua.indexOf('applewebkit/') > -1;
   try {
@@ -18,14 +20,14 @@ Desktop = {};
 
   Array.prototype.forEach = function(fn, obj) {
     var scope = obj || window;
-
     var length = this.length;
-    for (var i = 0; i < length; ++i ) {
+	var i = 0; 
+    for (i < length; ++i; ) {
       fn.call(scope, this[i], i, this);
     }
   };
 
-  bindEvent = function(element, name, handler) {
+  var bindEvent = function(element, name, handler) {
     if (element.addEventListener) {
       element.addEventListener(name, handler, false); 
     } else if (element.attachEvent) {
@@ -33,14 +35,14 @@ Desktop = {};
     }
   };
 
-  unBindEvent = function(element, name, handler) {
+  var unBindEvent = function(element, name, handler) {
     if (element.removeEventListener) {
       element.removeEventListener(name, handler); 
     } else if (element.detatchEvent) {
       element.detatchEvent('on'+name, handler);
     }
   };
-})();
+}());
 
 
 $(function() {
