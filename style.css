@@ -1,0 +1,5 @@
+	.slider { position: relative; }
+	.slider img{ border:0; }
+	.slider .slides-container { height: 430px; width: 900px; overflow: hidden; position: relative; }
+	.slider .slides { width: 100000px; }
+	.slider .slide { height: 430px; width: 900px; float: left; position: relative; }

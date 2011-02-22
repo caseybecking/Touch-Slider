@@ -77,25 +77,25 @@ $(function() {
 		});
     $('#landing-slide-dots').append(box);
   }
-	
-	
-
-$('div.arrows a.left.ui-btn.ui-btn-icon-notext.ui-btn-corner-all.ui-shadow.ui-btn-up-c').click(function() {
-	clearTimeout(autoplay);
-	controller.current_x = controller.limitXBounds(controller.previousPageX(controller.current_x));
-      controller.update(controller.current_x, true);
-      controller.runHook('move', controller);
-
-	return false;
-	});
-$('div.arrows a.right.ui-btn.ui-btn-icon-notext.ui-btn-corner-all.ui-shadow.ui-btn-up-c').click(function() {
-	clearTimeout(autoplay);
-	controller.current_x = controller.limitXBounds(controller.nextPageX(controller.current_x));
-      controller.update(controller.current_x, true);
-      controller.runHook('move', controller);
-	
-	return false;
-	});
+// 	
+// 	
+// 
+// $('div.arrows a.left.ui-btn.ui-btn-icon-notext.ui-btn-corner-all.ui-shadow.ui-btn-up-c').click(function() {
+// 	clearTimeout(autoplay);
+// 	controller.current_x = controller.limitXBounds(controller.previousPageX(controller.current_x));
+//       controller.update(controller.current_x, true);
+//       controller.runHook('move', controller);
+// 
+// 	return false;
+// 	});
+// $('div.arrows a.right.ui-btn.ui-btn-icon-notext.ui-btn-corner-all.ui-shadow.ui-btn-up-c').click(function() {
+// 	clearTimeout(autoplay);
+// 	controller.current_x = controller.limitXBounds(controller.nextPageX(controller.current_x));
+//       controller.update(controller.current_x, true);
+//       controller.runHook('move', controller);
+// 	
+// 	return false;
+// 	});
   var ap_count = 1;
   var autoplay = setInterval(function() {
     if (ap_count < $('.slider .slides > .slide').size()) { 
